@@ -17,11 +17,6 @@ module.exports = {
       'babel-polyfill',
       'react',
       'react-dom',
-      'react-router-redux',
-      'redux',
-      'react-redux',
-      'redux-thunk',
-      'reselect',
       'jquery',
       'react-router',
       'isomorphic-fetch'
@@ -46,22 +41,6 @@ module.exports = {
           presets: ['es2015','react'],
           plugins: ['transform-decorators-legacy']
         }
-      },
-      {
-        include: [APP_PATH],
-        loader: 'babel-loader',
-        query: {
-          plugins: [
-            [
-              'react-css-modules',
-              {
-                // APP_PATH,
-                generateScopedName: '[name]__[local]'
-              }
-            ]
-          ]
-        },
-        test: /\.js$/
       },
       {
         test: /\.(png|jpg|gif|ico)$/,

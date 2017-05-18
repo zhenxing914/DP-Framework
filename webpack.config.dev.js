@@ -19,7 +19,6 @@ module.exports = {
     filename: '[name].js', //编译后的文件名字
     chunkFilename: '[name].[chunkhash:5].min.js',
   },
-  devtool: 'source-map',
   module: {
     loaders: [
       {
@@ -33,22 +32,6 @@ module.exports = {
         include: [APP_PATH]
       },
       {
-        include: [APP_PATH],
-        loader: 'babel-loader',
-        query: {
-          plugins: [
-            [
-              'react-css-modules',
-              {
-                // APP_PATH,
-                generateScopedName: '[name]__[local]'
-              }
-            ]
-          ]
-        },
-        test: /\.js$/
-      },
-      {
         test: /\.(png|jpg|gif)$/,
         exclude: /^node_modules$/,
         loader: 'url-loader?limit=8192&name=images/[hash:8].[name].[ext]',
@@ -56,14 +39,9 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        exclude: [APP_PATH],
+        // exclude: [APP_PATH],
         loader: ExtractTextPlugin.extract('style', 'css')
       }, 
-      {
-        include: [APP_PATH],
-        loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules&localIdentName=[name]__[local]'),
-        test: /\.css$/
-      },
       {
         test: /\.(ttf|eot|svg|woff)\??.*$/,
         loader: 'file-loader'

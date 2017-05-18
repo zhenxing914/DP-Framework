@@ -1,5 +1,5 @@
 import React from 'react';
-import Home from '../../views/Home/Home';
+import {Link} from 'react-router';
 
 export default class App extends React.Component {
 	constructor(props) {
@@ -9,8 +9,13 @@ export default class App extends React.Component {
 	render() {
 		return (
 			<div>
-				<h2>Hello World</h2>
-				<Home />
+				<ul className="sidebar">
+			    <li><Link to="/login">Login Demo</Link></li>
+			    <li><Link to="/form">Form Demo</Link></li>
+			  </ul>
+			  <div className="content">
+			  	{this.props.children}
+			  </div>
 			</div>
 		)
 	}

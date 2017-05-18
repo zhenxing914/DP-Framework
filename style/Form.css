@@ -1,0 +1,70 @@
+.form-wrapper {
+	margin-top: 45px;
+}
+
+.form-sidebar {
+	width: 180px;
+	float: left;
+}
+
+.form-content {
+	padding: 0 20px 40px 200px;
+	background-color: #eaedf1;
+}
+
+.form-breadcrumb {
+	line-height: 40px;
+}
+
+.form-submit, 
+.form-search {
+	background-color: #fff;
+}
+
+.form-search-title,
+.form-submit-title {
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 45px;
+	padding-left: 20px;
+	border-bottom: 1px solid #d3d3d3;
+}
+
+.form-submit-subtitle {
+	line-height: 40px;
+	width: 80px;
+	float: left;
+	font-size: 14px;
+	padding-left: 20px;
+}
+
+.form-submit-form {
+	margin-left: 80px;
+	line-height: 40px;
+	width: 200px;
+}	
+
+.form-submit-textarea {
+	margin: 10px 0 0 80px;
+	width: 400px;
+}
+
+.form-submit-btnGroup {
+	padding-left: 70px;
+}
+
+.form-submit-btnGroup > button {
+	margin: 20px 10px;
+}
+
+.form-search-table {
+	padding: 20px;
+}
+
+.form-search-form > input{
+	width: 200px;
+}
+
+.form-search-form > * {
+	margin: 20px 10px 10px 20px;
+}

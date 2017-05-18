@@ -1,19 +1,27 @@
 import React from 'react';
-import { createStore, applyMiddleware, combineReducers } from 'redux';
-import { Provider } from 'react-redux';
 import ReactDOM from 'react-dom';
 import { Router, Route, IndexRoute, browserHistory, IndexRedirect} from 'react-router';
-import { syncHistoryWithStore, routerReducer, routerMiddleware, push } from 'react-router-redux';
-import thunk from 'redux-thunk';
 
-import reducers from './reducers/index';
 import App from './layout/App/App';
+import Login from './views/Login/Login';
+import Form from './views/Form/Form';
+import FormSearch from './views/FormSearch/FormSearch';
+import FormSubmit from './views/FormSubmit/FormSubmit';
 
-const store = createStore(reducers, applyMiddleware(thunk, routerMiddleware(browserHistory)))
+import 'DPComponents/assets/index.css';
+import '../style/style.css';
+import '../style/App.css';
+import '../style/Login.css';
+import '../style/Form.css';
 
 ReactDOM.render(
-  <Provider store={store}>
-  		<App />
-  		{/*router*/}
-  </Provider>
+  	<Router history={browserHistory}>
+  		<Route path="/" component={App}>
+  			<Route path="login" component={Login}></Route>
+  			<Route path="form" component={Form}>
+					<Route path="formSearch" component={FormSearch}></Route>
+  				<Route path="formSubmit" component={FormSubmit}></Route>
+  			</Route>
+  		</Route>
+  	</Router>
   , document.querySelector('.container'));

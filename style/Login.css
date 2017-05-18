@@ -1,0 +1,57 @@
+.iframe-icon {
+	font-size: 38px !important;
+	color: #FFF !important;
+	position: relative;
+	z-index: 1000;
+}
+
+.login-iframe {
+	height: 100%;
+  padding-top: 120px;
+  position: absolute;
+  top: 0;
+  min-width: 1300px;
+  left: 0;
+  right: 0;
+  overflow: auto;
+}
+
+.iframe-icon-inner {
+	width: 213px;
+  display: block;
+  margin: 0 auto 30px;
+  cursor: pointer;
+}
+
+.iframe-wrapper {
+	height: 600px;
+	/*overflow: auto;*/
+}
+
+.iframe-position {
+	margin: 0 auto;
+  width: 330px;
+  height: 360px;
+  display: block;
+  position: relative;
+  z-index: 1000;
+}
+
+.background {
+	background-color: #05477f;
+	overflow-x: hidden;
+}
+.background-img {
+	position: absolute;
+	left: 50%;
+}
+.background-img img {
+	position: relative;
+	left: -50%;
+	top: -145px;
+}
+
+.footer {
+	display: block;
+	margin: 100px auto 0;
+}

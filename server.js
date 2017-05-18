@@ -2,9 +2,14 @@ var webpack = require('webpack');
 var WebpackDevServer = require('webpack-dev-server'); 
 var config = require('./webpack.config.dev.js');
 
-// var proxy = {
-
-// };
+var proxy = {
+  '/authapi': {
+    target: 'http://10.142.78.40:8881/',
+    pathRewrite: {'^/authapi' : ''},
+    changeOrigin: true,
+    secure: false,
+  },
+};
 
 var server = new WebpackDevServer(webpack(config), {
   publicPath: config.output.publicPath,
