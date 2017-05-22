@@ -2,8 +2,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Router, Route, IndexRoute, browserHistory, IndexRedirect} from 'react-router';
-import {Request, setCookie} from 'DPUtils';
-
+import {Request, setCookie} from 'dputils';
 //引入容器组件 
 import App from './layout/App/App';
 import Login from './views/Login/Login';
@@ -12,7 +11,7 @@ import FormSearch from './views/FormSearch/FormSearch';
 import FormSubmit from './views/FormSubmit/FormSubmit';
 
 //引入全局css
-import 'DPComponents/assets/index.css';
+import 'dpcomponents/assets/index.css';
 import '../style/style.css';
 import '../style/App.css';
 import '../style/Login.css';

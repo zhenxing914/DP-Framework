@@ -11,7 +11,7 @@ var BUILD_PATH = path.resolve(ROOT_PATH, '/dev/app'); //发布文件所存放的
 
 module.exports = {
   entry: {
-    app: APP_FILE 
+    app: ['babel-polyfill', APP_FILE]
   },
   output: {
     publicPath: '/dev/app/', //编译好的文件，在服务器的路径,这是静态资源引用路径
@@ -22,14 +22,14 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.jsx?$/,
-        exclude: /^node_modules$/,
+        test: /\.js?$/,
+        // exclude: /^node_modules$/,
         loader: ['babel'],
         query: {
           presets: ['es2015','react'],
           plugins: ['transform-decorators-legacy']
-        },
-        include: [APP_PATH]
+        }
+        // include: [APP_PATH]
       },
       {
         test: /\.(png|jpg|gif)$/,

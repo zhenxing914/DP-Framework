@@ -1,5 +1,5 @@
 import React from 'react';
-import {Login as LoginComponent} from 'DPComponents';
+import {Login as LoginComponent} from 'dpcomponents';
 import loginImg from './img/login.png';
 import titleImg from './img/title.jpg';
 

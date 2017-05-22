@@ -1,7 +1,7 @@
 import React from 'react';
 import {browserHistory} from 'react-router';
 import {Input, Select, Button, message} from 'antd';
-import {Request, resolve} from 'DPUtils';
+import {Request, resolve} from 'dputils';
 import Required from '../../components/Required/Required';
 
 const subModules = {

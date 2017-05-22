@@ -31,8 +31,8 @@
     "webpack-dev-server": "^1.15.0"
   },
   "dependencies": {
-    "DPComponents": "^0.2.12",
-    "DPUtils": "^0.3.3",
+    "dpcomponents": "^0.2.14",
+    "dputils": "^0.3.11",
     "babel-polyfill": "^6.23.0",
     "babel-runtime": "^6.23.0",
     "es3ify-loader": "^0.2.0",

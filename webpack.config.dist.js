@@ -19,7 +19,9 @@ module.exports = {
       'react-dom',
       'jquery',
       'react-router',
-      'isomorphic-fetch'
+      'isomorphic-fetch',
+      'DPComponents',
+      'DPUtils'
     ],
     UI: [
       'antd'
@@ -46,11 +48,6 @@ module.exports = {
         test: /\.(png|jpg|gif|ico)$/,
         exclude: /^node_modules$/,
         loader: 'url-loader?limit=8192&name=images/[hash:8].[name].[ext]'
-      },
-      {
-        test: /\.css$/,
-        include: [APP_PATH],
-        loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules&localIdentName=[name]__[local]')
       },
       {
         test: /\.css$/,

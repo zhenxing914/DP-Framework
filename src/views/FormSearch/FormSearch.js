@@ -1,7 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 import { message, Table, Input, Button, Dropdown, Icon, Menu } from 'antd';
-import {Request, resolve} from 'DPUtils';
+import {Request, resolve} from 'dputils';
 
 const orderStatus = () => {
   return {
