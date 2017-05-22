@@ -3,6 +3,12 @@ var WebpackDevServer = require('webpack-dev-server');
 var config = require('./webpack.config.dev.js');
 
 var proxy = {
+  '/homeapi': {
+    target: 'http://10.142.78.40:8787',
+    pathRewrite: {'^/homeapi' : ''},
+    changeOrigin: true,
+    secure: false
+  },
   '/authapi': {
     target: 'http://10.142.78.40:8881/',
     pathRewrite: {'^/authapi' : ''},
@@ -17,7 +23,7 @@ var server = new WebpackDevServer(webpack(config), {
   stats: {
     colors: true,
   },
-  // proxy
+  proxy
 });
 
 server.app.get('*', function(req, res) {

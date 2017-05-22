@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router';
+import {Header} from 'DPComponents';
 
 export default class App extends React.Component {
 	constructor(props) {
@@ -7,15 +7,14 @@ export default class App extends React.Component {
 	}
 
 	render() {
+		const icon = {
+			key: "/",
+			value: <span className='icon-telecom-logo'></span>
+		}
 		return (
-			<div>
-				<ul className="sidebar">
-			    <li><Link to="/login">Login Demo</Link></li>
-			    <li><Link to="/form">Form Demo</Link></li>
-			  </ul>
-			  <div className="content">
-			  	{this.props.children}
-			  </div>
+			<div className='content'>
+				{window.location.pathname != '/log'&&<Header icon={icon}/>}
+			  {this.props.children}
 			</div>
 		)
 	}

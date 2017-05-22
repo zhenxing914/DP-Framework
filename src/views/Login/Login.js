@@ -10,7 +10,7 @@ export default class Login extends React.Component {
 
 	render() {
 		const demoIndex = "http://localhost:8080";
-		const path = "http://10.142.97.11:8787";
+		const path = "http://localhost:8080";
 		const menuList = [
         [{
           key: path + "/console",

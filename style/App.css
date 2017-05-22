@@ -1,8 +1,8 @@
-.sidebar {
-	width: 180px;
-	float: left;
+html, body, .container {
+	height: 100%;
 }
 
 .content {
-	margin-left: 220px;
+	height: 100%;
+	padding-top: 45px;
 }
