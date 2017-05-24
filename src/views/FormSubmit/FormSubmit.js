@@ -44,7 +44,8 @@ export default class FormSubmit extends React.Component {
 	setModule(value) {
 		this.setState({
 			selectedModule: value,
-			subModules: subModules[value]
+			subModules: subModules[value],
+			selectedSubModule: subModules[value][0].id
 		})
 	}
 
