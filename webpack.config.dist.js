@@ -20,8 +20,8 @@ module.exports = {
       'jquery',
       'react-router',
       'isomorphic-fetch',
-      'DPComponents',
-      'DPUtils'
+      'dpcomponents',
+      'dputils'
     ],
     UI: [
       'antd'
