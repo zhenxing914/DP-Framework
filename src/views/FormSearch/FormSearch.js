@@ -29,11 +29,10 @@ export default class MyOrder extends React.Component {
     this.state = {
       tds: [],
       loading: false,
-      visible: false,
-      totalCount: 0,
       query: '',
       pageId: 1,
       orderStatus: '',
+      //antd table组件列信息
       columns: [{
         title: '工单编号',
         dataIndex: 'id',
@@ -82,6 +81,7 @@ export default class MyOrder extends React.Component {
     })
   }
 
+  //请求table数据，需要在回调中调用，参数对应筛选条件，分别为页码，工单状态，模糊查询内，工单所属模块（demo中没用到）
   getOrderList(page=1, status='', searchContent='', subModuleId='0') {
     this.setState({loading: true});
     Request(`/homeapi/workorder/getList`, {
@@ -137,16 +137,19 @@ export default class MyOrder extends React.Component {
     })
   }
 
+  //点击触发模糊查询
   conditionQuery() {
     this.getOrderList(this.state.page, this.state.orderStatus, this.state.query);
   }
 
+  //回车触发模糊查询
   conditionQueryByEnter(e) {
     if(e.charCode == 13) {
       this.conditionQuery();
     }
   }
 
+  //查看指定状态的工单
   chooseStatus(item) {
     this.setState({
       orderStatus: item.key
@@ -154,10 +157,12 @@ export default class MyOrder extends React.Component {
     this.getOrderList(this.state.page, item.key, this.state.query);
   }
 
+  //每条工单项的‘查看’回调
   checkDetails() {
     console.log('test');
   }
 
+  //生命周期函数，组件加载进页面前触发
   componentWillMount() {
     var _this = this;
     this.getOrderList();
