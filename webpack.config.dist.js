@@ -12,7 +12,7 @@ var BUILD_PATH = './dist/app'; //发布文件所存放的目录
 
 module.exports = {
   entry: {
-    app: ['babel-polyfill', APP_FILE],
+    app: [APP_FILE],
     common: [
       'babel-polyfill',
       'react',

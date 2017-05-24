@@ -1,106 +1,112 @@
 .form {
-	height: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #eaedf1;
 }
 
 .form-sidebar {
-	width: 180px;
-	float: left;
-	height: 100%;
+    width: 180px;
+    float: left;
+    height: 100%;
 }
 
 .form-content {
-	height: 100%;
-	padding: 0 20px 40px 200px;
-	background-color: #eaedf1;
+    height: 100%;
+    padding: 0 20px 40px 200px;
+    background-color: #eaedf1;
 }
 
 .form-breadcrumb {
-	line-height: 40px;
+    line-height: 40px;
 }
 
-.form-submit, 
+.form-submit,
 .form-search {
-	background-color: #fff;
-	padding-bottom: 50px;
-	overflow: auto;
+    background-color: #fff;
+    padding-bottom: 50px;
+    overflow: auto;
 }
 
 .form-search-title,
 .form-submit-title {
-	font-size: 16px;
-	font-weight: bold;
-	line-height: 45px;
-	padding-left: 20px;
-	border-bottom: 1px solid #d3d3d3;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 45px;
+    padding-left: 20px;
+    border-bottom: 1px solid #d3d3d3;
 }
 
 .form-submit-subtitle {
-	line-height: 40px;
-	width: 90px;
-	float: left;
-	font-size: 14px;
+    line-height: 40px;
+    width: 90px;
+    float: left;
+    font-size: 14px;
 }
 
 .form-submit-form {
-	margin-left: 95px;
-	line-height: 40px;
+    margin-left: 95px;
+    line-height: 40px;
 }
 
 .form-submit-textarea {
-	margin: 10px 0 0 95px;
-	width: 420px;
+    margin: 10px 0 0 95px;
+    width: 420px;
 }
 
 .form-submit-btnGroup {
-	padding-left: 85px;
+    padding-left: 85px;
 }
 
 .form-submit-btnGroup > button {
-	margin: 20px 10px;
+    margin: 20px 10px;
 }
 
 .form-submit-content,
 .form-search-content {
-	padding: 10px 20px;
+    padding: 10px 20px;
 }
 
 .form-search-table {
-	padding: 20px;
+    padding: 20px;
 }
 
-.form-search-form > input{
-	width: 200px;
+.form-search-form > input {
+    width: 200px;
 }
 
 .form-search-form > * {
-	margin: 20px 10px 10px 20px;
+    margin: 20px 10px 10px 20px;
 }
 
 .form-search-input-search {
-	width: 280px;
-	padding-bottom: 25px;
+    width: 280px;
+    padding-bottom: 25px;
 }
 
 .form-search-switch-status {
-	cursor: pointer;
+    cursor: pointer;
 }
 
 .form-search-operation-position {
-	padding-right: 10px;
+    padding-right: 10px;
 }
 
 .form-search-hover {
-	cursor: pointer;
+    cursor: pointer;
 }
 
 .order-content {
-	padding:25px 20px;
-	position: relative;
+    padding: 25px 20px;
+    position: relative;
 }
 
 .form-search-table-supply {
-	margin-top: -40px;
-	font-size: 12px;
-	color: #666;
+    margin-top: -40px;
+    font-size: 12px;
+    color: #666;
+}
+
+.form-sidebar {
+    position: fixed;
 }
 
