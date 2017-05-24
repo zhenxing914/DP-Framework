@@ -12,7 +12,7 @@ var BUILD_PATH = './dist/app'; //发布文件所存放的目录
 
 module.exports = {
   entry: {
-    app: [APP_FILE],
+    app: ['babel-polyfill', APP_FILE],
     common: [
       'babel-polyfill',
       'react',
@@ -36,9 +36,9 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.jsx?$/,
-        exclude: /^node_modules$/,
-        loader: ['es3ify-loader'],
+        test: /\.js?$/,
+        // exclude: /^node_modules$/,
+        loader: ['babel'],
         query: {
           presets: ['es2015','react'],
           plugins: ['transform-decorators-legacy']
