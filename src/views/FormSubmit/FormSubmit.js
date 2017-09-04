@@ -72,31 +72,7 @@ export default class FormSubmit extends React.Component {
 		if(!title.length) {
 			message.error("标题不能为空")
 		} else {
-			Request(`/homeapi/workorder/createWo`, {
-				method: 'POST',
-				headers: {
-				  'Content-Type': 'application/json'
-				},
-				body: {
-					module: this.state.selectedModule,
-					subModule: this.state.selectedSubModule,
-					title: title,
-					description: this.state.desc.replace(/^\s*|\s*$/g,''),
-					phoneNumber: '13313313333',
-					email: '',
-					imageInfo: '[]',
-					fileInfo: ''
-				}
-			}).then(data => {
-				resolve(data, function(msg){
-					message.success(msg);
-					setTimeout(function(){
-						browserHistory.push('/form/formSearch');
-					}, 1000)
-				}, function(errorMsg) {
-					message.error(errorMsg);
-				})
-		  })
+            message.info("创建成功！");
 		}
 	}
 

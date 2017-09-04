@@ -13,7 +13,7 @@ export default class App extends React.Component {
 		}
 		return (
 			<div className='content'>
-				{window.location.pathname != '/log' && <Header icon={icon}/>}
+				{/*{window.location.pathname != '/log' && <Header icon={icon}/>}*/}
 			  {this.props.children}
 			</div>
 		)

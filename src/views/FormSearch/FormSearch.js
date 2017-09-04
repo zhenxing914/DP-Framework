@@ -84,57 +84,7 @@ export default class MyOrder extends React.Component {
   //请求table数据，需要在回调中调用，参数对应筛选条件，分别为页码，工单状态，模糊查询内，工单所属模块（demo中没用到）
   getOrderList(page=1, status='', searchContent='', subModuleId='0') {
     this.setState({loading: true});
-    Request(`/homeapi/workorder/getList`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: {
-        page,
-        status,
-        searchContent: encodeURIComponent(searchContent),
-        subModuleId
-      }
-    }).then(items => {
-      this.setState({loading: false});
-      var _this = this;
-      resolve(items, function() {
-        var tds = [];
-        items.respBody.message.workOrderList.forEach(item => {
-          var td = {};
-          for (let [key, value] of Object.entries(item)) {
-            switch(key) {
-              case 'status':
-                var operation = ['COMPLETE','CANCEL'].includes(value) ? true : false;
-                var status = `●${orderStatus()[value]}`;
-                var color = value == 'COMPLETE' ? '#22c202': '#ff0000';
-                td[key] = <span style={{color}}>{status}</span>;
-                break
-              case 'id':
-                td[key] = ('000000000' + value).substr(-9);
-                break
-              case 'gmtCreated':
-                td[key] = moment(value).format('YYYY-MM-DD HH:mm:ss');
-                break
-              case 'title':
-                td[key] = value.length > 7 ? value.substr(0, 7) + '……' : value;
-                break;
-              default:
-                td[key] = value;
-            }
-          }
-          td['key'] = td['id'];
-          td['module'] = `${td['module']}/${td['subModule']}`
-          td['operation'] = ['查看'];
-          tds.push(td);
-        })
-
-        _this.setState({
-          tds,
-          totalCount: items.respBody.message.totalCount
-        })
-      })
-    })
+    message.info("查询成功！");
   }
 
   //点击触发模糊查询
@@ -165,7 +115,7 @@ export default class MyOrder extends React.Component {
   //生命周期函数，组件加载进页面前触发
   componentWillMount() {
     var _this = this;
-    this.getOrderList();
+    // this.getOrderList();
   }
 
   render() {
