@@ -2,10 +2,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Router, Route, IndexRoute, browserHistory, IndexRedirect} from 'react-router';
-import {Request, setCookie} from 'dputils';
+
 //引入容器组件 
 import App from './layout/App/App';
-import Login from './views/Login/Login';
 import Form from './views/Form/Form';
 import FormSearch from './views/FormSearch/FormSearch';
 import FormSubmit from './views/FormSubmit/FormSubmit';
@@ -16,6 +15,7 @@ import '../style/style.css';
 import '../style/App.css';
 import '../style/Login.css';
 import '../style/Form.css';
+import '../style/yostyle.css';
 
 ReactDOM.render(
   	<Router history={browserHistory}>

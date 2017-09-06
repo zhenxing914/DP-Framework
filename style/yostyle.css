@@ -1,0 +1,269 @@
+.ant-menu-dark,
+.ant-menu-dark .ant-menu-sub,
+.ant-menu-dark .ant-menu-inline.ant-menu-sub {
+	background: #333744;
+}
+
+.main-content {
+	padding: 0 25px;
+	background: #ECECEC;
+}
+
+.main-content-header {
+	padding: 15px 0;
+}
+
+.ant-breadcrumb a {
+  color: #108ee9;
+}
+
+.main-content-body {
+	background: #fff;
+	border-radius: 3px;
+}
+
+.content-title {
+	line-height: 60px;
+	padding: 0 20px;
+	border-bottom: #ECECEC solid 1px;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+.content-title-button {
+	float: right;
+}
+
+.content-body {
+	padding: 20px;
+}
+
+.content-body-zero-bottom {
+	padding: 20px 20px 0;
+}
+
+.ant-btn-primary {
+	border-color: #00c1de;
+	background-color: #00c1de;
+}
+
+.ant-btn-primary:active, .ant-btn-primary.active,
+.ant-btn-primary:hover, .ant-btn-primary.hover {
+	border-color: #00c1de;
+	background-color: #00c1de;
+}
+
+.ant-pagination-item-active,
+.ant-pagination-item-active:hover {
+	border-color: #00c1de;
+	background-color: #00c1de;
+}
+
+.chart-title {
+	text-align: center;
+  font-weight: bold;
+}
+
+.recharts-y-axis .recharts-cartesian-axis-label {
+	-webkit-transform: translate(44px,-43px) rotate(90deg);
+	        transform: translate(44px,-43px) rotate(90deg);
+}
+
+.yo-chart-box .recharts-tooltip-wrapper {
+	background-color: #fff;
+  padding: 10px;
+  border: 1px solid #eee;
+}
+
+.table-operation a {
+	color: #108ee9;
+}
+
+.table-operation span {
+	color: #000;
+}
+
+.monitor-instances {
+	margin: 20px 0;
+}
+
+.monitor-instances:after {
+	content:".";
+	display:block;
+	height:0;
+	visibility:hidden;
+	clear:both;
+}
+
+.instance-card {
+  width: 50%;
+  float: left;
+}
+
+.instance-left-card,
+.instance-right-card {
+	border: solid 1px #eee;
+	border-radius: 4px;
+	height: 300px;
+	position: relative;
+	padding-top: 65px;
+}
+
+.instance-left-card {
+	margin-right: 10px;
+}
+
+.instance-right-card {
+	margin-left: 10px;
+}
+
+.instance-title {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	line-height: 50px;
+	padding-left: 20px;
+	border-bottom: 1px solid #eee;
+}
+
+.instance-card .recharts-legend-item-addon {
+	float: right;
+	margin-top: 5px;
+}
+
+.yo-instance-card .recharts-yAxis .recharts-label {
+	-webkit-transform: translate(170px,10px) rotate(90deg);
+	        transform: translate(170px,10px) rotate(90deg);
+}
+
+.yo-instance-card .recharts-tooltip-wrapper {
+	background-color: #fff;
+  padding: 10px;
+  border: 1px solid #eee;
+}
+
+.yo-legend-item-addon {
+  position: absolute;
+  right: 35px;
+  top: 75px;
+}
+
+.content-title-addon {
+	float: right;
+}
+
+.card-title-addon {
+	float: right;
+	position: relative;
+	right: 20px;
+}
+
+.table-ctrl-line {
+	margin-bottom: 10px;
+}
+
+.search-input-box {
+	display: inline-block;
+	width: 150px;
+}
+
+.search-input-box input {
+	border-radius: 3px;
+}
+
+.search-button-box {
+	display: inline-block;
+	margin-left: 5px;
+}
+
+.float-button-box {
+	float: right;
+}
+
+.table-page-button {
+	float: right;
+}
+
+.table-page-button-group {
+	margin: 10px 0;
+}
+
+.table-page-button-group:after {
+	content: ".";
+	visibility: hidden;
+	clear: both;
+}
+
+.yo-ctrl-button {
+	width: 135px;
+	height: 35px;
+}
+
+.yo-required:before {
+    display: inline-block;
+    margin-right: 4px;
+    content: "*";
+    font-family: SimSun;
+    line-height: 1;
+    font-size: 12px;
+    color: #f04134;
+}
+
+.yo-modal .ant-radio-button-wrapper-disabled.ant-radio-button-wrapper-checked {
+	color: #000;
+}
+
+.yo-form-box {
+	width: 500px;
+	margin: 0 auto;
+}
+
+.yo-table-title {
+	border: solid 1px #eee;
+	height: 50px;
+	background-color: #f7f7f7;
+	line-height: 50px;
+  padding-left: 7px;
+  margin-top: 20px;
+  margin-bottom: -1px;
+  border-radius: 3px 3px 0 0;
+  font-weight: bold;
+}
+
+.yo-table-title:first-of-type {
+	margin-top: 0;
+}
+
+.yo-table-footer {
+	border: solid 1px #eee;
+	height: 50px;
+	line-height: 50px;
+  padding-left: 7px;
+  margin-top: -1px;
+  margin-bottom: 20px;
+  border-radius: 0 0 3px 3px;
+}
+
+.yo-button,
+.yo-button:hover {
+	background-color: #bedff9;
+	color: #fff;
+	border-color: #bedff9;
+}
+
+.api-conf-ctrl-line {
+	margin: 30px auto 90px auto;
+	width: 300px;
+}
+
+.api-conf-edit-box input {
+	border-radius: 3px;
+}
+
+.api-conf-edit-box .ant-select {
+	width: 100%;
+}
+
+.api-conf-edit-box .ant-form-item {
+	margin-bottom: 0;
+}

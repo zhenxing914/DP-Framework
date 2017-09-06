@@ -1,7 +1,6 @@
 import React from 'react';
 import {browserHistory} from 'react-router';
 import {Input, Select, Button, message} from 'antd';
-import {Request, resolve} from 'dputils';
 import Required from '../../components/Required/Required';
 
 const subModules = {
@@ -72,7 +71,10 @@ export default class FormSubmit extends React.Component {
 		if(!title.length) {
 			message.error("标题不能为空")
 		} else {
-            message.info("创建成功！");
+            message.success("创建成功！");
+            setTimeout(function(){
+                browserHistory.push('/form/formSearch');
+            }, 1000)
 		}
 	}
 
